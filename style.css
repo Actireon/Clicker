@@ -19,8 +19,3 @@
   #spades, #clubs, #hearts, #diams {
     display: none
   }
-
-  p {
-      text-align: center;
-      font-weight: bold;
-  }
