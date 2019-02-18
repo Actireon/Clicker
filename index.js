@@ -72,9 +72,13 @@ function f_obtain(event) {
           temp2 = [...order];
         }
       }
+
       console.log(temp2);
+
       for (var g = 0, h = temp2.length; g < h; g++) {
+
         var nghbr = val + temp2[g];
+
         if (nghbr < 0 || nghbr >= 42) {
           continue;
         } else {
@@ -86,6 +90,7 @@ function f_obtain(event) {
             ) {
               continue;
             } // Searching for bubble in buffer
+
             if (
               store.find(function(str) {
                 return str == nghbr;
@@ -99,11 +104,14 @@ function f_obtain(event) {
         }
       }
     });
+
     buffer = [...temp]; //Saving in buffer all founded neighbours
+
     buffer.map(function(buf) {
       div[buf].style.backgroundColor = "grey";
       store.push(buf);
     }); //saving elements from buffer in store
+    
     if (temp.length != 0) {
       return blockHandler(store, buffer);
     } //Launching recursion function where we're sending last buffer which holds all founded neighbours in the last blockHandler() performance
